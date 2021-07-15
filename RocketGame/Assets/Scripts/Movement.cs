@@ -9,6 +9,9 @@ public class Movement : MonoBehaviour
     [SerializeField] float force = 100f;
     [SerializeField] float rotateForce = 100f;
     [SerializeField] AudioClip mainEngine;
+    [SerializeField] ParticleSystem mainParticle;
+   [SerializeField] ParticleSystem AParticle;
+   [SerializeField] ParticleSystem DParticle;
     AudioSource boostSound;
     Rigidbody rb;
 
@@ -27,34 +30,80 @@ public class Movement : MonoBehaviour
     }
 
 
-  private void ProcessThrust()
+  private void ProcessThrust() //principal thing 1
     {
         if (Input.GetKey(KeyCode.Space))
         {
-           rb.AddRelativeForce(Vector3.up * force * Time.deltaTime); //Relative to rigidbody position/rotation
-          if(!boostSound.isPlaying)
-          {
-              boostSound.PlayOneShot(mainEngine);
-          }
-          
+            StartThrusting();
+
         }
-       else
-       {
-           boostSound.Stop();
-       }
+        else
+        {
+            StopThrusting();
+        }
     }
-    
-    private void ProcessRotation()
+
+     private void ProcessRotation() // principal thing 2
     {
          if (Input.GetKey(KeyCode.A))
         {
-            ApplyRotation(rotateForce);
+            RotateLeft();
+
         }
 
         else if (Input.GetKey(KeyCode.D))
         {
-           ApplyRotation(-rotateForce);
+            RotateRight();
+
         }
+        else //how to stop the particles
+        {
+            StopRotating();
+        }
+    }
+
+   // ---------- start explanation what is in principal things 1 and 2 --------------
+    private void StartThrusting()
+    {
+        rb.AddRelativeForce(Vector3.up * force * Time.deltaTime); //Relative to rigidbody position/rotation
+        if (!boostSound.isPlaying)
+        {
+            boostSound.PlayOneShot(mainEngine);
+        }
+
+        if (!mainParticle.isPlaying)
+        {
+            mainParticle.Play();
+        }
+    }
+     private void StopThrusting()
+    {
+        boostSound.Stop();
+        mainParticle.Stop();
+    }
+
+     
+    private void RotateRight()
+    {
+        ApplyRotation(-rotateForce);
+        if (!DParticle.isPlaying)
+        {
+            DParticle.Play();
+        }
+    }
+
+    private void RotateLeft()
+    {
+        ApplyRotation(rotateForce);
+        if (!AParticle.isPlaying)
+        {
+            AParticle.Play();
+        }
+    }
+      private void StopRotating()
+    {
+        AParticle.Stop();
+        DParticle.Stop();
     }
 
     private void ApplyRotation(float rotationThisFrame)
