@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5934480423614953312}
   - component: {fileID: 7023265322591344925}
   - component: {fileID: 8726689173378162699}
+  - component: {fileID: 1948296044770212091}
   m_Layer: 0
   m_Name: building_3_brick
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1948296044770212091
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015457127927116098}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0978267, y: 0.7910332, z: 0.55606765}
+  m_Center: {x: 0.00000005960464, y: 5.32748, z: 0.00000023841856}

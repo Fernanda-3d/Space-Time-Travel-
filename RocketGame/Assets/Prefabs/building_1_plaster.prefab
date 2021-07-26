@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3402914154261901766}
   - component: {fileID: 4969032678226602112}
   - component: {fileID: 8050469641260829208}
+  - component: {fileID: 2603668917744700952}
   m_Layer: 0
   m_Name: building_1_plaster
   m_TagString: Untagged
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2603668917744700952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8092323345474852888}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9999999, y: 5.3331532, z: 3.948538}
+  m_Center: {x: 0, y: 2.6665766, z: 0}
