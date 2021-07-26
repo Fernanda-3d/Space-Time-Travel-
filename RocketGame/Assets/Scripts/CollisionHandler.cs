@@ -7,11 +7,17 @@ public class CollisionHandler : MonoBehaviour
    [SerializeField] float levelLoadDelay = 2f;
    [SerializeField] AudioClip explodeSound;
    [SerializeField] AudioClip finishSound;
-   [SerializeField] ParticleSystem explodeParticle;
+  
+   [SerializeField] ParticleSystem mainParticle;
+   [SerializeField] ParticleSystem AParticle;
+   [SerializeField] ParticleSystem DParticle;
+   [SerializeField] ParticleSystem explodeParticle1, explodeParticle2, explodeParticle3, explodeParticle4,explodeParticle5;
    [SerializeField] ParticleSystem finishParticle;
        AudioSource boostSound;
    bool isTransitioning = false; //means if we are transitioning don't do stuff
    bool collisionDisabled = false; // we have collision on and them we will turn off by choice
+
+ 
    
 
     /*Switch Statements are a Conditional like If/Else Statements - 
@@ -66,8 +72,18 @@ public class CollisionHandler : MonoBehaviour
     void StartCrashSequence()
    {
        isTransitioning = true;
+       
        boostSound.PlayOneShot(explodeSound);
-       explodeParticle.Play();
+
+       mainParticle.Stop();
+       AParticle.Stop();
+       DParticle.Stop();
+
+       explodeParticle1.Play(); 
+       explodeParticle2.Play();
+       explodeParticle3.Play();
+       explodeParticle4.Play();
+       explodeParticle5.Play();
        GetComponent<Movement>().enabled = false;
       Invoke ("ReloadLevel", levelLoadDelay); //we use Invoke to put a bit of a delay in the action happening
    }
@@ -89,6 +105,8 @@ public class CollisionHandler : MonoBehaviour
        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentSceneIndex);
         // .buildIndex means that the number of the index is the one we're currently on
+        
+        
    }
 
     void RespondToDebugKeys()

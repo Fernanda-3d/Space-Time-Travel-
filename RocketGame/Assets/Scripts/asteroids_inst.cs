@@ -40,16 +40,16 @@ public class asteroids_inst : MonoBehaviour
         while (asteroidCount < 10)
         {
             
-            xPos = Random.Range(390, 850);
+            xPos = Random.Range(230, 750);
             yPos = Random.Range(-1, 150);
             zPos = Random.Range(-50, 110);
             
 
-            xPos2 = Random.Range(410, 950);
+            xPos2 = Random.Range(250, 850);
             yPos2 = Random.Range(-2, 100);
             zPos2 = Random.Range(-40, 130);
 
-            xPos3 = Random.Range(330, 800);
+            xPos3 = Random.Range(280, 700);
             yPos3 = Random.Range(0,80);
             zPos3 = Random.Range(-55, 115);
 

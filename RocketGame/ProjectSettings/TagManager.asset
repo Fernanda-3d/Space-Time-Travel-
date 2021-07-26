@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Start
   - Fuel
+  - menu_music
   layers:
   - Default
   - TransparentFX
