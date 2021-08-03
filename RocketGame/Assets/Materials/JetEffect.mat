@@ -37,15 +37,15 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - FresnelPower: 2.9
-    - NoiseDissolve: 3
-    - NoiseScale: 25
+    - FresnelPower: 3.39
+    - NoiseDissolve: 1.6
+    - NoiseScale: 40.69
     - NormalStrenght: 5
-    - VoronoiDissolve: 0.67
-    - VoronoiScale: 8
+    - VoronoiDissolve: 1.78
+    - VoronoiScale: 2
     m_Colors:
-    - FresnelColor: {r: 39.095123, g: 8.0565405, b: 1.7211653, a: 0.80784315}
-    - MainColor: {r: 1, g: 1, b: 1, a: 0}
+    - FresnelColor: {r: 52.19505, g: 11.257756, b: 2.8656106, a: 0.92156863}
+    - MainColor: {r: 2.6701567, g: 2.6701567, b: 2.6701567, a: 0.78431374}
     - NoiseSpeed: {r: -0.1, g: 0.1, b: 0, a: 0}
     - VoronoiColor: {r: 47.937256, g: 5.772549, b: 4.0156865, a: 0.9098039}
     - VoronoiSpeed: {r: 0.1, g: 0, b: 0, a: 0}

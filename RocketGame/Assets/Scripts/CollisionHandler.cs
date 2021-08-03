@@ -66,6 +66,7 @@ public class CollisionHandler : MonoBehaviour
         boostSound.PlayOneShot(finishSound);
         finishParticle.Play();
         GetComponent<Movement>().enabled = false;
+       
       Invoke ("LoadNextLevel", levelLoadDelay);
     }
 

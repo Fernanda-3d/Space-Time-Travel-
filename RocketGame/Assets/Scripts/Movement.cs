@@ -2,11 +2,12 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Movement : MonoBehaviour
 {
 
-    [SerializeField] float force = 100f;
+    [SerializeField] float force = 1000f;
     [SerializeField] float rotateForce = 100f;
     [SerializeField] AudioClip mainEngine;
     [SerializeField] ParticleSystem mainParticle;
@@ -31,12 +32,24 @@ public class Movement : MonoBehaviour
     }
 
 
-  private void ProcessThrust() //principal thing 1
+ public void ProcessThrust() //principal thing 1
     {
-        if (Input.GetKey(KeyCode.Space))
+        //if (Input.GetKey(KeyCode.Space))
+        if(CrossPlatformInputManager.GetButton("Jump"))
+             
         {
            
-            StartThrusting();
+            //StartThrusting();
+            rb.AddRelativeForce(Vector3.up * force * Time.deltaTime); //Relative to rigidbody position/rotation
+        if (!boostSound.isPlaying)
+        {
+            boostSound.PlayOneShot(mainEngine);
+        }
+
+      if (!mainParticle.isPlaying)
+        {
+            mainParticle.Play();
+        } 
 
         }
         else
@@ -47,15 +60,17 @@ public class Movement : MonoBehaviour
 
      private void ProcessRotation() // principal thing 2
     {
-         if (Input.GetKey(KeyCode.A))
+         //if (Input.GetKey(KeyCode.A))
+         if (CrossPlatformInputManager.GetButton("Left"))
+        
         {
             RotateLeft();
 
         }
 
-        else if (Input.GetKey(KeyCode.D))
+       if (CrossPlatformInputManager.GetButton("Right"))
         {
-            RotateRight();
+          RotateRight();
 
         }
         else //how to stop the particles
@@ -64,6 +79,8 @@ public class Movement : MonoBehaviour
         }
     }
 
+   
+  
    // ---------- start explanation what is in principal things 1 and 2 --------------
     private void StartThrusting()
     {

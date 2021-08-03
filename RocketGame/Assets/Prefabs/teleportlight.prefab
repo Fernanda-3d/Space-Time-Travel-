@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6733513492022867938}
   - component: {fileID: 7711074252476100327}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: teleportlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,9 +42,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.1109528, g: 0.7776116, b: 0.8018868, a: 1}
-  m_Intensity: 1
-  m_Range: 4
+  m_Color: {r: 0, g: 0.965909, b: 1, a: 1}
+  m_Intensity: 2.73
+  m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

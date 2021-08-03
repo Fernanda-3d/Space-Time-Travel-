@@ -5,9 +5,6 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: bed7e950f66fda3499a7b6546c94da7a
@@ -24,11 +21,20 @@ EditorBuildSettings:
     path: Assets/Scenes/1950.unity
     guid: 6fe6f072e42eaf84aa6cb736445e0436
   - enabled: 1
-    path: Assets/Scenes/2021.unity
-    guid: 54f25aac2b38a02458b0b532580a49b2
+    path: Assets/Scenes/Welcome2029.unity
+    guid: 906d236b648e2254a90f3dc8f46b122f
   - enabled: 1
-    path: Assets/Scenes/2090.unity
-    guid: 09f0e2af16dbba64ab38d9c04d43ea0c
+    path: Assets/Scenes/2029.unity
+    guid: e2daa07e603282f4e937248dd65ab3ac
+  - enabled: 1
+    path: Assets/Scenes/Welcome2080.unity
+    guid: a398e3d665446374193cd6be0713b903
+  - enabled: 1
+    path: Assets/Scenes/2080.unity
+    guid: 6176d20c94909ec4fb04282fc643d2c1
+  - enabled: 1
+    path: Assets/Scenes/Congratulations.unity
+    guid: 6be8ff71c57d8de499759d3b7bdc6eaa
   - enabled: 0
     path: Assets/Scenes/ExampleScenes/CharacterSelection_example.unity
     guid: d6377e87caf48e5429cc852969ec64f0

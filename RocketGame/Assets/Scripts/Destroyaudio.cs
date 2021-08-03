@@ -8,7 +8,7 @@ public class Destroyaudio : MonoBehaviour
     void Start()
     {
       Destroy(GameObject.FindGameObjectWithTag("menu_music"));
-         
+        
     }
 
     // Update is called once per frame

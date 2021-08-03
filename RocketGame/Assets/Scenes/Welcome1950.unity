@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.013023775, g: 0.012801384, b: 0.01305364, a: 1}
+  m_IndirectSpecularColor: {r: 0.012113426, g: 0.011578607, b: 0.011324673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -15397,7 +15397,7 @@ GameObject:
   - component: {fileID: 1069528018}
   m_Layer: 0
   m_Name: Backgound
-  m_TagString: Untagged
+  m_TagString: level1_music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15426,7 +15426,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: a11de80754217f34494ea66d780f8811, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.391
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
