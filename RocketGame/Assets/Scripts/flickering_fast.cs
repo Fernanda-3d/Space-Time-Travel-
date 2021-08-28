@@ -5,6 +5,8 @@ using UnityEngine;
 public class flickering_fast : MonoBehaviour
 {    public bool isFlickering = false;
     public float timeDelay;
+   
+     
 
 
     // Update is called once per frame
@@ -29,4 +31,6 @@ public class flickering_fast : MonoBehaviour
         isFlickering = false;
 
     }
+
+     
 }

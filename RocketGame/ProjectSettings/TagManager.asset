@@ -10,6 +10,7 @@ TagManager:
   - level1_music
   - level2_music
   - level3_music
+  - arrow
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - Map
   - Environment
-  - 
+  - PostProcessing
   - 
   - 
   - 

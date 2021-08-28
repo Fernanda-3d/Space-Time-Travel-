@@ -7,6 +7,7 @@ public class CollisionHandler : MonoBehaviour
    [SerializeField] float levelLoadDelay = 2f;
    [SerializeField] AudioClip explodeSound;
    [SerializeField] AudioClip finishSound;
+   
   
    [SerializeField] ParticleSystem mainParticle;
    [SerializeField] ParticleSystem AParticle;
@@ -51,14 +52,16 @@ public class CollisionHandler : MonoBehaviour
                 NextLevel();
                 break;
 
-            case "Fuel":
-                Debug.Log("You picked up fuel");
-                break;
+           // case "arrow":
+             //  boostSound.PlayOneShot(collectSound);
+               // break;
             default:
                 StartCrashSequence(); 
                 break;           
        }
    }
+
+  
 
     private void NextLevel()
     {   
