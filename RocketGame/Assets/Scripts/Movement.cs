@@ -34,12 +34,15 @@ public class Movement : MonoBehaviour
 
  public void ProcessThrust() //principal thing 1
     {
-        //if (Input.GetKey(KeyCode.Space))
-        if(CrossPlatformInputManager.GetButton("Jump"))
+       if (Input.GetKey(KeyCode.Space))
+        {
+             StartThrusting();
+        } 
+        
+       /* if(CrossPlatformInputManager.GetButton("Jump"))
              
         {
-           
-            //StartThrusting();
+                      
             rb.AddRelativeForce(Vector3.up * force * Time.deltaTime); //Relative to rigidbody position/rotation
         if (!boostSound.isPlaying)
         {
@@ -51,17 +54,25 @@ public class Movement : MonoBehaviour
             mainParticle.Play();
         } 
 
-        }
+        } */
         else
         {
             StopThrusting();
-        }
+        } 
     }
 
      private void ProcessRotation() // principal thing 2
     {
-         //if (Input.GetKey(KeyCode.A))
-         if (CrossPlatformInputManager.GetButton("Left"))
+         if (Input.GetKey(KeyCode.A))
+         {
+             RotateLeft();
+         }
+          if (Input.GetKey(KeyCode.D))
+         {
+             RotateRight();
+         } 
+         
+       /*  if (CrossPlatformInputManager.GetButton("Left"))
         
         {
             RotateLeft();
@@ -72,7 +83,7 @@ public class Movement : MonoBehaviour
         {
           RotateRight();
 
-        }
+        } */
         else //how to stop the particles
         {
             StopRotating();

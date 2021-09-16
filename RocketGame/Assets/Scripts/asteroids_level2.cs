@@ -41,16 +41,16 @@ public class asteroids_level2 : MonoBehaviour
         {
             
             xPos = Random.Range(750, 1200);
-            yPos = Random.Range(-1, 150);
+            yPos = Random.Range(-1, 250);
             zPos = Random.Range(-50, 110);
             
 
             xPos2 = Random.Range(700, 1050);
-            yPos2 = Random.Range(-2, 100);
+            yPos2 = Random.Range(-2, 230);
             zPos2 = Random.Range(-40, 130);
 
             xPos3 = Random.Range(680, 9000);
-            yPos3 = Random.Range(0,80);
+            yPos3 = Random.Range(0,200);
             zPos3 = Random.Range(-55, 115);
 
            GameObject asteroid_1 = Instantiate(asteroid1, new Vector3(xPos, yPos, zPos), Quaternion.identity);

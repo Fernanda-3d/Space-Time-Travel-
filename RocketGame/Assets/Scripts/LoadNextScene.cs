@@ -42,7 +42,7 @@ public class LoadNextScene : MonoBehaviour
     }
     private void QuitGame()
     {
-    Application.Quit();
-    Debug.Log("Quit");
+    //Application.Quit();
+    SceneManager.LoadScene("Intro");
     }
 }
